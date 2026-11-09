@@ -23,7 +23,8 @@ PID_FILE="$STATE/sensing-server.pid"
 LOG_FILE="$STATE/sensing-server.log"
 HTTP_PORT=3000
 WS_PORT=3001
-URL="http://localhost:$HTTP_PORT"
+# The server's root page is a plain link list; the dashboard lives under /ui.
+URL="http://localhost:$HTTP_PORT/ui/index.html"
 # Only these linked repositories are needed to build the sensing server.
 SUBMODULES="v2/crates/worldgraph v2/crates/ruforecast v2/crates/ruview-swarm vendor/rufield"
 
